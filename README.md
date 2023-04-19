@@ -20,7 +20,7 @@ Each quote packet contains information of bid and ask quotes at the given time f
 # Structure of the Programme
 The architecture idea of the project can be seen in the picture below:
 
-![alt text](Architecture.png)
+![Architecture](https://user-images.githubusercontent.com/48606569/233208419-d2fe1d48-1834-48d1-a90d-6a2d1de04a34.png)
 
 At the heart of the system is the *Controllet*, which controls the communication across the entire system. It firstly reads the data from the incoming PCAP file. It divided the information into a PCAP Header and the packet information. It then passes the header information to *file_header* and the packet information to the *packet*. *Packet* then analyses the data and breaks it into the *Bid* and *Ask* components, which are handled seperately. Once every component has analysed the necessery data, the *Controller* then arranges results in a desireable output.
 
